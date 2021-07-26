@@ -1,0 +1,70 @@
+﻿@{ @model CarDealership.Models.HomePageViewModel
+
+ViewBag.Title = "Home Page";
+
+<div class="row">
+    <a href="@Url.Action("Specials","Home")"><div class="jumbotron">
+            <div class="specialName">
+          
+            </div>
+            <div class="specialDescription">
+            
+            </div>
+    </div></a>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <hr style="height:1px;border:none;color:#333;background-color:#333;" />
+        <h3><b>Featured Vehicles</b></h3>
+        @foreach (var vehicle in Model.FeaturedModel)
+        {
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <p class="featuredVehicle"><img src="@Url.Content("~/Images/" + vehicle.PictureFileName)" /></p>
+                <p class="featuredVehicle">@vehicle.Year @vehicle.MakeName @vehicle.ModelName</p>
+                <p class="featuredVehicle">@vehicle.SalePrice.ToString("c0")</p>
+            </div>
+        }
+    </div>
+</div>
+}
+
+
+@section scripts
+{
+<script>
+    $(document).ready(function () {
+        var i = 0;
+        var jumbotron = $(".jumbotron");
+        var name = $(".specialName");
+        var description = $(".specialDescription");
+        var names = [];
+        var descriptions = [];
+       @{ 
+           foreach(var special in Model.SpecialsModel)
+           {
+               @:names.push("@special.Name");
+               @:descriptions.push("@special.Description");
+           }
+       }
+        cycleSpecials();
+        setInterval(cycleSpecials, 15000);
+
+        function cycleSpecials() {
+            name.empty();
+            description.empty();
+            jumbotron.css({
+                // need to add more background images ~10 and make sure no more than 10 specials 
+                'background-image': 'url(/Images/specialsBackground' + i + '.jpg)'
+            });
+            name.append("<h1 class=\"nameText\">" + names[i] + "</h1>");
+            description.append("<p class=\"descriptionText\">" + descriptions[i] + "</p>");
+            i = i + 1;
+            if (i == names.length)
+            {
+                i = 0;
+            }
+        }
+
+    })
+</script>
+ }

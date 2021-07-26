@@ -1,0 +1,143 @@
+﻿@model CarDealership.Models.EditVehicleViewModel
+@{
+    ViewBag.Title = "EditVehicle";
+}
+
+<h2>Edit Vehicle</h2>
+
+<div>
+    @using (Html.BeginForm("EditVehicle", "Admin", FormMethod.Post, new { enctype = "multipart/form-data", id = "frmEditVehicle" }))
+    {
+        @Html.ValidationSummary(true)
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Make</label>
+                @Html.DropDownListFor(m => m.NewVehicle.Make, new SelectList(Model.Makes, "MakeID", "MakeName"), new { @class = "form-control" })
+            </div>
+            <div class="form-group col-md-6">
+                <label>Model</label>
+                @Html.DropDownListFor(m => m.NewVehicle.Model, new SelectList(Model.Models, "ModelID", "ModelName"), new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Type</label>
+                @Html.DropDownListFor(m => m.Type, new SelectList(Model.VehicleTypes, "TypeID", "TypeName"), new { @class = "form-control" })
+            </div>
+            <div class="form-group col-md-6">
+                <label>Body Style</label>
+                @Html.DropDownListFor(m => m.NewVehicle.BodyStyle, new SelectList(Model.BodyStyles, "BodyStyleID", "BodyStyleName"), new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Year</label>
+                @Html.TextBoxFor(m => m.NewVehicle.Year, new { @class = "form-control" })
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.NewVehicle.Year)</span>
+            </div>
+            <div class="form-group col-md-6">
+                <label>Transmission</label>
+                @Html.DropDownListFor(m => m.NewVehicle.Trans,
+                 new List<SelectListItem>
+                 {
+                     new SelectListItem { Text="Automatic", Value="Automatic"},
+                     new SelectListItem { Text="Manual", Value="Manual"}
+
+                 }, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Color</label>
+                @Html.DropDownListFor(m => m.NewVehicle.Color, new SelectList(Model.Colors, "ColorID", "ColorName"), new { @class = "form-control" })
+            </div>
+            <div class="form-group col-md-6">
+                <label>Interior</label>
+                @Html.DropDownListFor(m => m.NewVehicle.Interior, new SelectList(Model.Colors, "ColorName", "ColorName"), new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Mileage</label>
+                @Html.TextBoxFor(m => m.NewVehicle.Mileage, new { @class = "form-control" })
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.NewVehicle.Mileage)</span>
+            </div>
+            <div class="form-group col-md-6">
+                <label>Vin #</label>
+                @Html.TextBoxFor(m => m.NewVehicle.VinNumber, new { @class = "form-control" })
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.NewVehicle.VinNumber)</span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>MSRP</label>
+                @Html.TextBoxFor(m => m.NewVehicle.MSRP, new { @class = "form-control" })
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.NewVehicle.MSRP)</span>
+            </div>
+            <div class="form-group col-md-6">
+                <label>Sale Price</label>
+                @Html.TextBoxFor(m => m.NewVehicle.SalePrice, new { @class = "form-control" })
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.NewVehicle.SalePrice)</span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-12">
+                <label>Description</label>
+                @Html.TextAreaFor(m => m.NewVehicle.Description, new { @class = "form-control", id = "addVehicleDescription" })
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.NewVehicle.Description)</span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-12">
+                <p><img src="@Url.Content("~/Images/" + Model.NewVehicle.PictureFileName)" /></p>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label>Picture</label>
+                <input id="ImageUpload" name="ImageUpload" type="file" class="form-control" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                @Html.CheckBoxFor(m => m.Checkbox)
+                <label>Feature this vehicle</label>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.TextBoxFor(m => m.NewVehicle.PictureFileName, new { @class = "form-control hidden", @Value = Model.NewVehicle.PictureFileName })
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.NewVehicle.VehicleID, new { @class = "form-control hidden", @Value = Model.NewVehicle.VehicleID })
+            </div>
+            <div class="form-group col-md-1">
+                <button class="btn-danger" onclick="deleteVehicle(@Model.NewVehicle.VehicleID)">Delete</button>
+            </div>
+            <div class="form-group col-md-1">
+                <button class="btn-primary">Save</button>
+            </div>
+        </div>
+    }
+</div>
+
+@section scripts
+{
+    <script>
+        function deleteVehicle(id) {
+            var check = confirm("Are you sure you want to delete this Vehicle?")
+            if (check == true) {
+                $.ajax({
+                    type: 'DELETE',
+                    url: 'http://localhost:63113/api/vehicles/delete/' + id,
+                    success: function () {
+                        window.location.href = '@Url.Action("Vehicles","Admin")'
+                    }
+                });
+            }
+        }
+    </script>
+
+}
+

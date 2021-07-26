@@ -1,0 +1,68 @@
+﻿@model CarDealership.Models.InventoryReportViewModel
+@{
+    ViewBag.Title = "Inventory";
+}
+
+<h2>Inventory Report</h2>
+<div>
+    <p>New Vehicles</p>
+    <div class="row">
+        <div class="col-md-5 makeModelTable">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Make</th>
+                        <th>Model</th>
+                        <th>Count</th>
+                        <th>Stock Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.newVehicles)
+                    {
+                        <tr>
+                            <td>@item.Year</td>
+                            <td>@item.Make</td>
+                            <td>@item.Model</td>
+                            <td>@item.Count</td>
+                            <td>@item.StockValue.ToString("c0")</td>
+
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <p>Used Vehicles</p>
+    <div class="row">
+        <div class="col-md-5 makeModelTable">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Make</th>
+                        <th>Model</th>
+                        <th>Count</th>
+                        <th>Stock Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.usedVehicles)
+                    {
+                        <tr>
+                            <td>@item.Year</td>
+                            <td>@item.Make</td>
+                            <td>@item.Model</td>
+                            <td>@item.Count</td>
+                            <td>@item.StockValue.ToString("c0")</td>
+
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

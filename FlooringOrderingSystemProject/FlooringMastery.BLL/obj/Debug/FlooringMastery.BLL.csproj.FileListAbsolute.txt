@@ -1,0 +1,11 @@
+C:\Users\markp\Desktop\Github backup 3.17.21\online-net-markpm-808-master\Summatives\mastery-oop\FlooringMastery\FlooringMastery.BLL\bin\Debug\FlooringMastery.BLL.dll
+C:\Users\markp\Desktop\Github backup 3.17.21\online-net-markpm-808-master\Summatives\mastery-oop\FlooringMastery\FlooringMastery.BLL\bin\Debug\FlooringMastery.BLL.pdb
+C:\Users\markp\Desktop\Github backup 3.17.21\online-net-markpm-808-master\Summatives\mastery-oop\FlooringMastery\FlooringMastery.BLL\bin\Debug\FlooringMastery.Data.dll
+C:\Users\markp\Desktop\Github backup 3.17.21\online-net-markpm-808-master\Summatives\mastery-oop\FlooringMastery\FlooringMastery.BLL\bin\Debug\FlooringMastery.Models.dll
+C:\Users\markp\Desktop\Github backup 3.17.21\online-net-markpm-808-master\Summatives\mastery-oop\FlooringMastery\FlooringMastery.BLL\bin\Debug\FlooringMastery.Data.pdb
+C:\Users\markp\Desktop\Github backup 3.17.21\online-net-markpm-808-master\Summatives\mastery-oop\FlooringMastery\FlooringMastery.BLL\bin\Debug\FlooringMastery.Models.pdb
+C:\Users\markp\Desktop\Github backup 3.17.21\online-net-markpm-808-master\Summatives\mastery-oop\FlooringMastery\FlooringMastery.BLL\obj\Debug\FlooringMastery.BLL.csprojAssemblyReference.cache
+C:\Users\markp\Desktop\Github backup 3.17.21\online-net-markpm-808-master\Summatives\mastery-oop\FlooringMastery\FlooringMastery.BLL\obj\Debug\FlooringMastery.BLL.csproj.CoreCompileInputs.cache
+C:\Users\markp\Desktop\Github backup 3.17.21\online-net-markpm-808-master\Summatives\mastery-oop\FlooringMastery\FlooringMastery.BLL\obj\Debug\FlooringMastery.BLL.csproj.CopyComplete
+C:\Users\markp\Desktop\Github backup 3.17.21\online-net-markpm-808-master\Summatives\mastery-oop\FlooringMastery\FlooringMastery.BLL\obj\Debug\FlooringMastery.BLL.dll
+C:\Users\markp\Desktop\Github backup 3.17.21\online-net-markpm-808-master\Summatives\mastery-oop\FlooringMastery\FlooringMastery.BLL\obj\Debug\FlooringMastery.BLL.pdb

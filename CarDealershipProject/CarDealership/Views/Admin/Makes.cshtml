@@ -1,0 +1,48 @@
+﻿@model CarDealership.Models.MakesAddViewModel
+@{
+    ViewBag.Title = "Makes";
+}
+
+<h2>Makes</h2>
+
+<div class="squareBorder row">
+    @using (Html.BeginForm("Makes", "Admin", FormMethod.Post, new { enctype = "multipart/form-data", id = "frmAddMake" }))
+    {
+
+    <div class="form-inline form-group">
+        <label>New Make</label>
+        @Html.TextBoxFor(m => m.NewMake.MakeName, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(m => m.NewMake.MakeName)</span>
+
+        <button class="btn-primary" id="saveMakeButton">Save</button>
+    </div>
+     
+    }
+</div>
+
+<div class="row">
+    <div class="col-md-5 makeModelTable">
+        <table class="table table-hover">
+            <thead class="thead-light">
+                <tr>
+                    <th>Make</th>
+                    <th>Date Added</th>
+                    <th>User</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var make in Model.Makes)
+                {
+                    <tr>
+                        <td>@make.MakeName</td>
+                        <td>@make.DateAdded.ToString("M/d/yyyy")</td>
+                        <td>@make.UserEmail</td>
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+

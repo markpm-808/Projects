@@ -1,0 +1,6 @@
+C:\Users\markp\Desktop\Github backup 3.17.21\online-net-markpm-808-master\Summatives\mastery-oop\FlooringMastery\FlooringMastery.Models\bin\Debug\FlooringMastery.Models.dll
+C:\Users\markp\Desktop\Github backup 3.17.21\online-net-markpm-808-master\Summatives\mastery-oop\FlooringMastery\FlooringMastery.Models\bin\Debug\FlooringMastery.Models.pdb
+C:\Users\markp\Desktop\Github backup 3.17.21\online-net-markpm-808-master\Summatives\mastery-oop\FlooringMastery\FlooringMastery.Models\obj\Debug\FlooringMastery.Models.csprojAssemblyReference.cache
+C:\Users\markp\Desktop\Github backup 3.17.21\online-net-markpm-808-master\Summatives\mastery-oop\FlooringMastery\FlooringMastery.Models\obj\Debug\FlooringMastery.Models.csproj.CoreCompileInputs.cache
+C:\Users\markp\Desktop\Github backup 3.17.21\online-net-markpm-808-master\Summatives\mastery-oop\FlooringMastery\FlooringMastery.Models\obj\Debug\FlooringMastery.Models.dll
+C:\Users\markp\Desktop\Github backup 3.17.21\online-net-markpm-808-master\Summatives\mastery-oop\FlooringMastery\FlooringMastery.Models\obj\Debug\FlooringMastery.Models.pdb

@@ -1,0 +1,232 @@
+﻿@model CarDealership.Models.Queries.SearchVehicleParameters
+@{
+    ViewBag.Title = "Vehicles";
+}
+
+<h2>Admin</h2>
+<p><a href="@Url.Action("AddVehicle","Admin")"><u>Add a new Vehicle</u></a></p>
+<form id="searchForm" class="form-inline">
+    <div class="row">
+        <div class="col-sm-12 pull-left">
+            <p>Quick Search</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="text" class="form-control" id="makeModelYear" placeholder="Enter make, model, or year">
+            </div>
+            <div class="form-group">
+                <label for="minPrice" id="minRate">Price</label>
+                @Html.DropDownListFor(m => m.MinPrice,
+                      new List<SelectListItem>
+                      {
+                          new SelectListItem { Text="$10,000", Value="10000"},
+                          new SelectListItem { Text="$15,000", Value="15000"},
+                          new SelectListItem { Text="$20,000", Value="20000"},
+                          new SelectListItem { Text="$25,000", Value="25000"},
+                          new SelectListItem { Text="$30,000", Value="30000"},
+                          new SelectListItem { Text="$35,000", Value="35000"},
+                          new SelectListItem { Text="$40,000", Value="40000"},
+                          new SelectListItem { Text="$45,000", Value="45000"},
+                          new SelectListItem { Text="$50,000", Value="50000"}
+                      },
+                      "No Min",
+                      new { @class = "form-control" })
+                <div class="form-group" id="maxRate">
+                    @Html.DropDownListFor(m => m.MaxPrice,
+                      new List<SelectListItem>
+                      {
+                          new SelectListItem { Text="$10,000", Value="10000"},
+                          new SelectListItem { Text="$15,000", Value="15000"},
+                          new SelectListItem { Text="$20,000", Value="20000"},
+                          new SelectListItem { Text="$25,000", Value="25000"},
+                          new SelectListItem { Text="$30,000", Value="30000"},
+                          new SelectListItem { Text="$35,000", Value="35000"},
+                          new SelectListItem { Text="$40,000", Value="40000"},
+                          new SelectListItem { Text="$45,000", Value="45000"},
+                          new SelectListItem { Text="$50,000", Value="50000"}
+                      },
+                      "No Max",
+                      new { @class = "form-control" })
+                </div>
+            </div>
+
+
+            <div class="form-group" id="minYear">
+                <label for="minRate">Year</label>
+                @Html.DropDownListFor(m => m.MinYear,
+                     new List<SelectListItem>
+                     {
+                         new SelectListItem { Text="2000", Value="2000"},
+                         new SelectListItem { Text="2001", Value="2001"},
+                         new SelectListItem { Text="2002", Value="2002"},
+                         new SelectListItem { Text="2003", Value="2003"},
+                         new SelectListItem { Text="2004", Value="2004"},
+                         new SelectListItem { Text="2005", Value="2005"},
+                         new SelectListItem { Text="2006", Value="2006"},
+                         new SelectListItem { Text="2007", Value="2007"},
+                         new SelectListItem { Text="2008", Value="2008"},
+                         new SelectListItem { Text="2009", Value="2009"},
+                         new SelectListItem { Text="2010", Value="2010"},
+                         new SelectListItem { Text="2011", Value="2011"},
+                         new SelectListItem { Text="2012", Value="2012"},
+                         new SelectListItem { Text="2013", Value="2013"},
+                         new SelectListItem { Text="2014", Value="2014"},
+                         new SelectListItem { Text="2015", Value="2015"},
+                         new SelectListItem { Text="2016", Value="2016"},
+                         new SelectListItem { Text="2017", Value="2017"},
+                         new SelectListItem { Text="2018", Value="2018"},
+                         new SelectListItem { Text="2019", Value="2019"},
+                         new SelectListItem { Text="2020", Value="2020"},
+                         new SelectListItem { Text="2021", Value="2021"}
+                     },
+                     "No Min",
+                     new { @class = "form-control" })
+                <div class="form-group" id="maxYear">
+                    @Html.DropDownListFor(m => m.MaxYear,
+                     new List<SelectListItem>
+                     {
+                         new SelectListItem { Text="2000", Value="2000"},
+                         new SelectListItem { Text="2001", Value="2001"},
+                         new SelectListItem { Text="2002", Value="2002"},
+                         new SelectListItem { Text="2003", Value="2003"},
+                         new SelectListItem { Text="2004", Value="2004"},
+                         new SelectListItem { Text="2005", Value="2005"},
+                         new SelectListItem { Text="2006", Value="2006"},
+                         new SelectListItem { Text="2007", Value="2007"},
+                         new SelectListItem { Text="2008", Value="2008"},
+                         new SelectListItem { Text="2009", Value="2009"},
+                         new SelectListItem { Text="2010", Value="2010"},
+                         new SelectListItem { Text="2011", Value="2011"},
+                         new SelectListItem { Text="2012", Value="2012"},
+                         new SelectListItem { Text="2013", Value="2013"},
+                         new SelectListItem { Text="2014", Value="2014"},
+                         new SelectListItem { Text="2015", Value="2015"},
+                         new SelectListItem { Text="2016", Value="2016"},
+                         new SelectListItem { Text="2017", Value="2017"},
+                         new SelectListItem { Text="2018", Value="2018"},
+                         new SelectListItem { Text="2019", Value="2019"},
+                         new SelectListItem { Text="2020", Value="2020"},
+                         new SelectListItem { Text="2021", Value="2021"}
+                     },
+                     "No Max",
+                     new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row center-block">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <button type="submit" onclick="search()" class="btn btn-default btn-block" id="searchNew">Search</button>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</form>
+
+<h2>Search Results</h2>
+<div id="searchResults">
+
+
+</div>
+
+
+@section Scripts
+{
+    <script>
+    $(document).ready(function () {
+        $('#searchForm').submit(function (e) {
+            search();
+            return false;
+        });
+    });
+
+
+        function search() {
+            var params;
+            var imagePath = '@Url.Content("~/Images/")';
+            var detailsPath = '@Url.Action("EditVehicle", "Admin")';
+
+                 var makes = [];
+       @{
+           foreach(var name in @ViewBag.Makes)
+           {
+               @:makes.push("@Html.Raw(name)".toLowerCase());
+           }
+       }
+
+            var minPriceValue = $('#MinPrice').val();
+            var maxPriceValue = $('#MaxPrice').val();
+            var minYearValue = $('#MinYear').val();
+            var maxYearValue = $('#MaxYear').val();
+
+            var makeValue = '';
+            var modelValue = '';
+            var yearValue = '';
+            var makeModelYear = $('#makeModelYear').val();
+
+            if (!isNaN(parseInt(makeModelYear))) {
+                yearValue = $('#makeModelYear').val();
+            }
+            else if (makes.includes(makeModelYear.toLowerCase())) {
+
+                makeValue = $('#makeModelYear').val();
+                console.log(makeValue);
+            }
+            else {
+                modelValue = $('#makeModelYear').val();
+                console.log(modelValue);
+            }
+
+
+
+
+            if (!yearValue > 0) {
+                yearValue = 0;
+            }
+            if (!minYearValue > 0) {
+                minYearValue = 0;
+            }
+            if (!maxYearValue > 0) {
+                maxYearValue = 0;
+            }
+
+
+            params = 'make=' + makeValue + '&model=' + modelValue + '&year=' + yearValue + '&minPrice=' + minPriceValue + '&maxPrice=' + maxPriceValue + '&minYear=' +
+                minYearValue + '&maxYear=' + maxYearValue;
+            $.ajax({
+                type: 'GET',
+                url: 'http://localhost:63113/api/vehicles/search/sales?' + params,
+                success: function (results) {
+                    $('#searchResults').empty();
+
+                    $.each(results, function (index, vehicle) {
+                        var html ='<div class="col-xs-12" id="details">' +
+                            '<div class="row">' + '<div class="col-xs-12 col-sm-12 col-md-12 pull-left" id="vehicleTop">' +
+                            '<span>' + vehicle.Year + ' ' +  vehicle.MakeName + ' ' + vehicle.ModelName + '</span>' + '</div>' + ' </div>' + '<div class="row">' +
+                            ' <div class="col-xs-12 col-sm-4 col-md-3 pull-left">' + '<img src="' + imagePath + vehicle.PictureFileName + '" />' +
+                            '</div>' + '<div class="col-xs-12 col-sm-4 col-md-3 col" style="margin-top:10px;">' +
+                            '<p><b>Body Style: </b>' + vehicle.BodyStyleName + '</p>' + '<p><b>Trans: </b>' + vehicle.Transmission + '</p>' +
+                            '<p><b>Color: </b>' + vehicle.ColorName + '</p>' + '</div>' + ' <div class="col-xs-12 col-sm-4 col-md-3" style="margin-top:10px;">' +
+                            '<p><b>Interior: </b>' + vehicle.Interior + '</p>' + ' <p><b>Mileage: </b>' + vehicle.Mileage + '</p>' +
+                            ' <p><b>VIN #: </b>' + vehicle.VinNumber + '</p>' + '</div>' + ' <div class="col-xs-12 col-sm-4 col-md-3" id="vehiclePrices">' +
+                            '<p><b>Sale Price: </b>' + vehicle.SalePrice + '</p>' + '<p><b>MSRP: </b>' + vehicle.MSRP + '</p>' +
+                            '<button onclick="location.href=' + '\'' + detailsPath + '/' + vehicle.VehicleID + '\'' + '";>Edit</button>'
+                             + '</div>' + '</div>' + '</div >';
+
+
+                        $('#searchResults').append(html.toString());
+                    });
+
+
+                },
+                error: function () {
+                   alert('Error performing search, try again later!')
+                }
+            });
+        }
+
+    </script>
+}
+

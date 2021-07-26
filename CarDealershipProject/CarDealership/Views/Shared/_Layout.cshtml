@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <p id="carLogo"><img src="@Url.Content("~/Images/carLogo.png")" /></p>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("New Inventory", "New", "Inventory")</li>
+                    <li>@Html.ActionLink("Used Inventory", "Used", "Inventory")</li>
+                    <li>@Html.ActionLink("Specials", "Specials", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @if (Request.IsAuthenticated & User.IsInRole("Sales"))
+                    {
+                        <li>@Html.ActionLink("Sales", "Index", "Sales")</li>
+                    }
+                    else if (Request.IsAuthenticated & User.IsInRole("Admin"))
+                    {
+                        <li>@Html.ActionLink("Admin", "Vehicles", "Admin")</li>
+                    }
+                </ul>
+                @*Can edit to remove the partial login, we dont want to display login stuff to user  *@
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

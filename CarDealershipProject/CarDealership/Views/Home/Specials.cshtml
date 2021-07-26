@@ -1,0 +1,26 @@
+﻿@model List<CarDealership.Models.Tables.Special>
+
+@{
+    ViewBag.Title = "Specials";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h1><b>Specials</b></h1>
+
+        @{ 
+            foreach(var special in Model)
+            {
+                <div style="border:3px solid black;"class="col-xs-12 col-sm-12 col-md-12 specialItem">
+                    <div class="dollarSign col-xs-1 col-sm-1 col-md-1">
+                        <p id="specialsLogo"><img src="@Url.Content("~/Images/dollarSign.jpg")" /></p>
+                    </div>
+                    <p class="special"><b>@special.Name</b></p>
+                    <p class="special">@special.Description</p>
+                </div>
+            }
+        }
+    </div>
+
+</div>
+

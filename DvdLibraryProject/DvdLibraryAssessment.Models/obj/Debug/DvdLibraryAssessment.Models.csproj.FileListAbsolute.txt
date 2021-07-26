@@ -1,0 +1,12 @@
+C:\Users\markp\Desktop\GitHub\SG\online.net\Summatives\m9-summative\DvdLibraryAssessment\DvdLibraryAssessment.Models\bin\Debug\DvdLibraryAssessment.Models.dll
+C:\Users\markp\Desktop\GitHub\SG\online.net\Summatives\m9-summative\DvdLibraryAssessment\DvdLibraryAssessment.Models\bin\Debug\DvdLibraryAssessment.Models.pdb
+C:\Users\markp\Desktop\GitHub\SG\online.net\Summatives\m9-summative\DvdLibraryAssessment\DvdLibraryAssessment.Models\obj\Debug\DvdLibraryAssessment.Models.csprojAssemblyReference.cache
+C:\Users\markp\Desktop\GitHub\SG\online.net\Summatives\m9-summative\DvdLibraryAssessment\DvdLibraryAssessment.Models\obj\Debug\DvdLibraryAssessment.Models.csproj.CoreCompileInputs.cache
+C:\Users\markp\Desktop\GitHub\SG\online.net\Summatives\m9-summative\DvdLibraryAssessment\DvdLibraryAssessment.Models\obj\Debug\DvdLibraryAssessment.Models.dll
+C:\Users\markp\Desktop\GitHub\SG\online.net\Summatives\m9-summative\DvdLibraryAssessment\DvdLibraryAssessment.Models\obj\Debug\DvdLibraryAssessment.Models.pdb
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\DvdLibraryAssessment\DvdLibraryAssessment.Models\bin\Debug\DvdLibraryAssessment.Models.dll
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\DvdLibraryAssessment\DvdLibraryAssessment.Models\bin\Debug\DvdLibraryAssessment.Models.pdb
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\DvdLibraryAssessment\DvdLibraryAssessment.Models\obj\Debug\DvdLibraryAssessment.Models.csprojAssemblyReference.cache
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\DvdLibraryAssessment\DvdLibraryAssessment.Models\obj\Debug\DvdLibraryAssessment.Models.csproj.CoreCompileInputs.cache
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\DvdLibraryAssessment\DvdLibraryAssessment.Models\obj\Debug\DvdLibraryAssessment.Models.dll
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\DvdLibraryAssessment\DvdLibraryAssessment.Models\obj\Debug\DvdLibraryAssessment.Models.pdb

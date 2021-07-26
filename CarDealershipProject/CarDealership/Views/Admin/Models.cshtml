@@ -1,0 +1,54 @@
+﻿@model CarDealership.Models.ModelsAddViewModel
+@{
+    ViewBag.Title = "Models";
+}
+
+<h2>Models</h2>
+
+<div class="squareBorder row">
+    @using (Html.BeginForm("Models", "Admin", FormMethod.Post, new { enctype = "multipart/form-data", id = "frmAddModel" }))
+    {
+
+        <div class="form-inline form-group">
+            <label>New Make</label>
+            @Html.TextBoxFor(m => m.NewModel.ModelName, new { @class = "form-control" })
+            <span class="text-danger">@Html.ValidationMessageFor(m => m.NewModel.ModelName)</span>
+
+            <div class="form-inline form-group">
+                <label>Make</label>
+                @Html.DropDownListFor(m => m.NewModel.MakeName, new SelectList(Model.Makes, "MakeID", "MakeName"))
+            </div>
+
+            <button class="btn-primary" id="saveMakeButton">Save</button>
+        </div>
+
+    }
+</div>
+
+<div class="row">
+    <div class="col-md-5 makeModelTable">
+        <table class="table table-hover">
+            <thead class="thead-light">
+                <tr>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Date Added</th>
+                    <th>User</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Models)
+                {
+                <tr>
+                    <td>@item.MakeName</td>
+                    <td>@item.ModelName</td>
+                    <td>@item.DateAdded.ToString("M/d/yyyy")</td>
+                    <td>@item.UserEmail</td>
+
+                </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>

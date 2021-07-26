@@ -1,0 +1,14 @@
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\Summatives\mastery-ddwa\CarDealership\CarDealership.Tests\bin\Debug\CarDealership.Tests.dll.config
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\Summatives\mastery-ddwa\CarDealership\CarDealership.Tests\bin\Debug\CarDealership.Tests.dll
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\Summatives\mastery-ddwa\CarDealership\CarDealership.Tests\bin\Debug\CarDealership.Tests.pdb
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\Summatives\mastery-ddwa\CarDealership\CarDealership.Tests\bin\Debug\CarDealership.Data.dll
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\Summatives\mastery-ddwa\CarDealership\CarDealership.Tests\bin\Debug\CarDealership.Models.dll
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\Summatives\mastery-ddwa\CarDealership\CarDealership.Tests\bin\Debug\nunit.framework.dll
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\Summatives\mastery-ddwa\CarDealership\CarDealership.Tests\bin\Debug\CarDealership.Data.pdb
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\Summatives\mastery-ddwa\CarDealership\CarDealership.Tests\bin\Debug\CarDealership.Models.pdb
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\Summatives\mastery-ddwa\CarDealership\CarDealership.Tests\bin\Debug\nunit.framework.xml
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\Summatives\mastery-ddwa\CarDealership\CarDealership.Tests\obj\Debug\CarDealership.Tests.csprojAssemblyReference.cache
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\Summatives\mastery-ddwa\CarDealership\CarDealership.Tests\obj\Debug\CarDealership.Tests.csproj.CoreCompileInputs.cache
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\Summatives\mastery-ddwa\CarDealership\CarDealership.Tests\obj\Debug\CarDealership.Tests.csproj.CopyComplete
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\Summatives\mastery-ddwa\CarDealership\CarDealership.Tests\obj\Debug\CarDealership.Tests.dll
+C:\Users\markp\Desktop\GitHub\SoftwareGuildCourseWork\online.net\Summatives\mastery-ddwa\CarDealership\CarDealership.Tests\obj\Debug\CarDealership.Tests.pdb

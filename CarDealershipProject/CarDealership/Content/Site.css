@@ -1,0 +1,179 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.featuredVehicle {
+    text-align:center;
+    font-weight:bold;
+}
+
+.jumbotron {
+    background-size: cover;
+    color:black;
+}
+
+.specialName {
+    text-align: center;
+}
+.specialDescription {
+    text-align: center;
+}
+
+.nameText {
+    color: black;
+    margin: auto;
+    font-weight:bold;
+}
+
+.descriptionText {
+    color: black;
+    margin: auto;
+    font-weight:bold;
+}
+
+.specialItem {
+    margin-bottom:6px;
+}
+
+.special {
+    font-size:large;
+}
+
+a {
+    color:black;
+}
+.dollarSign {
+    text-align:left;
+}
+
+#details {
+    border-style:solid;
+    border-width:medium;
+    font-size:medium;
+    margin-top:10px;
+}
+
+#vehicleTop {
+    margin-top:20px;
+    margin-left:20px;
+    font-weight:bold;
+}
+#vehiclePrices {
+    text-align: right;
+    padding-right: 60px;
+    margin-top:10px;
+}
+#contactButton {
+    margin-bottom:10px;
+    text-align:right;
+    margin-right:10px;
+}
+
+.errors {
+    color:red;
+    font-size:small;
+}
+#searchNew {
+    margin-top: 10px;
+}
+
+#makeModelYear {
+    margin-right:20px;
+}
+
+#maxRate {
+    margin-left:10px;
+}
+#minRate {
+    margin-left: 140px;
+}
+#minYear {
+    margin-left:100px;
+}
+
+#searchForm {
+    padding:10px;
+    font-size: medium;
+    border-style: solid;
+    border-width: medium;
+}
+#detailsButton {
+    margin-bottom:5px;
+    margin-left:500px;
+}
+
+.hidden {
+    display:none;
+}
+
+
+.table {
+    border: solid black;
+}
+
+.table thead th {
+        border-top: solid #000;
+        border-left: solid #000;
+        border-right: solid #000;
+        background-color:lightgray;
+}
+.table td {
+        border-left: solid #000;
+        border-right: solid #000;
+
+}
+.squareBorder {
+    border:3px solid black;
+    margin-bottom:10px;
+}
+.makeModelTable {
+    padding: 0;
+}
+
+.saleReport {
+    margin-left: 30px;
+}
+#searchSaleReport {
+    margin-top:10px;
+}
+#addVehicleDescription {
+    min-width: 700px;
+    height: 150px;
+}
+
+#carLogo {
+    margin-top:5px;
+}
+
+#specialsLogo {
+    margin-top:10px;
+    margin-bottom:30px;
+}
+.validation-summary-errors {
+    color: red;
+    font-weight: bold;
+}
+#saveSpecialsButton {
+    margin-left:15px;
+}
